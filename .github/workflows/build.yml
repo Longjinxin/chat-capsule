@@ -12,7 +12,9 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    # 固定 windows-2022（VS2022）：windows-latest 已升级到 VS18，
+    # @electron/node-gyp 尚无法识别，会导致 better-sqlite3 编译失败。
+    runs-on: windows-2022
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
