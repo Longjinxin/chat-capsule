@@ -14,6 +14,26 @@
   <img src="docs/screenshot.png" alt="聊天胶囊主界面" width="360" />
 </p>
 
+## 🖼️ 界面预览
+
+**收起态悬浮胶囊** — 常驻屏幕右上角，不遮挡工作区，位置可随意拖动；点击或按快捷键即可展开。
+
+<p align="center">
+  <img src="docs/ui-capsule.png" alt="收起态悬浮胶囊" width="240" />
+</p>
+
+**设置界面** — 快捷键点击输入框后按下新组合即可修改，设置即时生效；话术支持一键导入 / 导出 JSON 备份（导入仅新增，不覆盖现有话术）。
+
+<p align="center">
+  <img src="docs/ui-settings.png" alt="设置界面" width="380" />
+</p>
+
+**话术管理** — 鼠标悬停在话术上显示编辑 / 删除按钮，拖动右侧手柄即可调整顺序。
+
+<p align="center">
+  <img src="docs/ui-list-hover.png" alt="话术悬停操作" width="380" />
+</p>
+
 ## ✨ 核心特性
 
 - **🔗 全局唤起** — `Ctrl+Alt+Space` 随时呼出悬浮胶囊，常驻屏幕右上角，不遮挡工作区
