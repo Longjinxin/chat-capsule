@@ -1,0 +1,33 @@
+# 聊天胶囊 - electron-builder 打包配置（portable 免安装版）
+# 说明：electron-builder 会在 build 前执行 install-app-deps，自动 rebuild
+# better-sqlite3 等原生依赖以匹配 Electron ABI。
+# 绿色版：解压即用，不写注册表，不污染系统。
+
+appId: com.chatcapsule.app
+productName: 聊天胶囊
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - dist/**/*
+  - package.json
+  - "!**/node_modules/better-sqlite3/build/Release/obj/**"
+  - "!**/node_modules/better-sqlite3/build/Release/obj.target/**"
+  - "!**/node_modules/better-sqlite3/build/Release/better_sqlite3.pdb"
+
+asarUnpack:
+  - "**/node_modules/better-sqlite3/**/*"
+
+win:
+  target:
+    - target: portable
+      arch:
+        - x64
+  artifactName: "${productName}-${version}-portable.${ext}"
+  # 便携版需要管理员解压目录时不被 UAC 拦截
+  requestedExecutionLevel: asInvoker
+
+portable:
+  # 解压后直接运行的入口
+  artifactName: "${productName}-${version}-portable.${ext}"

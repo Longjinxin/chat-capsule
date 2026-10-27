@@ -1,0 +1,15 @@
+node_modules/
+dist/
+release/
+coverage/
+.workbuddy/
+*.sqlite
+*.sqlite.tmp
+*.sqlite-wal
+*.sqlite-shm
+*.log
+.DS_Store
+Thumbs.db
+
+# 个人话术数据，不公开上传
+聊天胶囊话术.json
