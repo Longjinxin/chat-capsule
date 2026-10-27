@@ -77,6 +77,15 @@ npm run build
 npx electron-builder   # 产物输出至 release/
 ```
 
+### 📥 下载安装包（免自行构建）
+
+项目已接入 GitHub Actions 自动打包：
+
+- **每次 push 到 main** 自动构建 Windows portable exe，在仓库的 [Actions](https://github.com/Longjinxin/chat-capsule/actions) 页面选择对应构建记录，下载 `chat-capsule-windows-portable` 产物即可
+- **发布正式版本** 时打 `v*` 标签（如 `v0.1.0`），会自动创建 GitHub Release 并附上 exe，在 [Releases](https://github.com/Longjinxin/chat-capsule/releases) 页面下载
+
+> portable 为绿色免安装版：下载后双击即用，不写注册表、不污染系统。
+
 ## ⌨️ 快捷键
 
 | 功能 | 快捷键 |
